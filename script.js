@@ -202,3 +202,111 @@ function createCustomerCharts() {
 
 createCustomerCharts();
 
+// PRODUCT ANALYTICS
+
+// Top-Selling Products Chart
+
+const topProducts = document.getElementById(
+    "topProductsChart"
+);
+
+new Chart(topProducts, {
+
+    type: "bar",
+
+    data: {
+
+        labels: [
+            "Laptop",
+            "Mobile",
+            "Headphones",
+            "Keyboard"
+        ],
+
+        datasets: [{
+            label: "Units Sold",
+
+            data: [120, 200, 150, 90],
+
+            backgroundColor: [
+                "#2563eb",
+                "#16a34a",
+                "#f59e0b",
+                "#a855f7"
+            ],
+
+            borderRadius: 6
+        }]
+    },
+
+    options: {
+
+        indexAxis: "y",
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+        scales: {
+            x: {
+                beginAtZero: true
+            }
+        }
+    }
+
+});
+
+
+// Product Revenue Chart
+
+const productRevenue = document.getElementById(
+    "productRevenueChart"
+);
+
+new Chart(productRevenue, {
+
+    type: "doughnut",
+
+    data: {
+
+        labels: [
+            "Laptop",
+            "Mobile",
+            "Headphones",
+            "Keyboard"
+        ],
+
+        datasets: [{
+
+            data: [
+                660000,
+                500000,
+                450000,
+                90000
+            ],
+
+            backgroundColor: [
+                "#2563eb",
+                "#16a34a",
+                "#f59e0b",
+                "#a855f7"
+            ]
+
+        }]
+    },
+
+    options: {
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+        plugins: {
+            legend: {
+                position: "bottom"
+            }
+        }
+    }
+
+});
+
