@@ -105,7 +105,6 @@ function downloadReport() {
 
 // Customer Growth Chart
 
-
 // Customer Analytics Charts
 
 function createCustomerCharts() {
@@ -202,3 +201,4 @@ function createCustomerCharts() {
 }
 
 createCustomerCharts();
+
