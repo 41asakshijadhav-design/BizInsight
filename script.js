@@ -70,3 +70,35 @@ new Chart(sales, {
         responsive: true
     }
 });
+
+function downloadReport() {
+
+    const reportData = [
+        ["Customer", "Product", "Amount", "Status"],
+        ["Rahul Sharma", "Laptop", 55000, "Completed"],
+        ["Priya Patel", "Mobile", 25000, "Completed"],
+        ["Amit Kumar", "Headphones", 3000, "Pending"]
+    ];
+
+    const csvContent = reportData
+        .map(row => row.join(","))
+        .join("\n");
+
+    const file = new Blob(
+        [csvContent],
+        { type: "text/csv;charset=utf-8;" }
+    );
+
+    const link = document.createElement("a");
+
+    const url = URL.createObjectURL(file);
+
+    link.href = url;
+    link.download = "BizInsight_Report.csv";
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+}
