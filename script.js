@@ -102,3 +102,73 @@ function downloadReport() {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
 }
+
+// Customer Growth Chart
+
+const customerGrowth = document.getElementById(
+    "customerGrowthChart"
+);
+
+new Chart(customerGrowth, {
+
+    type: "line",
+
+    data: {
+        labels: [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun"
+        ],
+
+        datasets: [{
+            label: "New Customers",
+            data: [50, 65, 80, 75, 100, 120],
+
+            borderColor: "#2563eb",
+            backgroundColor: "rgba(37, 99, 235, 0.15)",
+
+            fill: true,
+            tension: 0.4
+        }]
+    },
+
+    options: {
+        responsive: true
+    }
+
+});
+
+
+// Customer Segmentation Chart
+
+const customerSegment = document.getElementById(
+    "customerSegmentChart"
+);
+
+new Chart(customerSegment, {
+
+    type: "doughnut",
+
+    data: {
+        labels: [
+            "New Customers",
+            "Returning Customers",
+            "Regular Customers"
+        ],
+
+        datasets: [{
+            data: [30, 45, 25],
+
+            backgroundColor: [
+                "#3b82f6",
+                "#16a34a",
+                "#f59e0b"
+            ]
+        }]
+    },
+
+    options: {
+        responsive: true
+    }
+
+});
+
