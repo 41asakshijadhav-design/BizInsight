@@ -231,3 +231,36 @@ footer {
     height: 240px !important;
 }
 
+.product-section {
+    margin-bottom: 30px;
+}
+
+.product-section > h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+.product-section .chart-box {
+    min-height: 320px;
+    height: 320px;
+    position: relative;
+}
+
+.product-section .chart-box canvas {
+    width: 100% !important;
+    height: 240px !important;
+}
+
+.product-section .table-box {
+    margin-top: 20px;
+}
+
+.product-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-section th {
+    background: #eff6ff;
+}
+
