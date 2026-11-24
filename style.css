@@ -219,3 +219,14 @@ footer {
 .customer-section .chart-box {
     min-height: 300px;
 }
+
+.customer-section .chart-box {
+    min-height: 320px;
+    height: 320px;
+    position: relative;
+}
+
+.customer-section .chart-box canvas {
+    width: 100% !important;
+    height: 240px !important;
+}
