@@ -206,3 +206,16 @@ footer {
     margin-left: 10px;
     background: lightblue;
 }
+
+.customer-section {
+    margin-bottom: 30px;
+}
+
+.customer-section > h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+.customer-section .chart-box {
+    min-height: 300px;
+}
