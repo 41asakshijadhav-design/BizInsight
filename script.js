@@ -105,70 +105,100 @@ function downloadReport() {
 
 // Customer Growth Chart
 
-const customerGrowth = document.getElementById(
-    "customerGrowthChart"
-);
 
-new Chart(customerGrowth, {
+// Customer Analytics Charts
 
-    type: "line",
+function createCustomerCharts() {
 
-    data: {
-        labels: [
-            "Jan", "Feb", "Mar",
-            "Apr", "May", "Jun"
-        ],
+    const growthCanvas = document.getElementById(
+        "customerGrowthChart"
+    );
 
-        datasets: [{
-            label: "New Customers",
-            data: [50, 65, 80, 75, 100, 120],
+    const segmentCanvas = document.getElementById(
+        "customerSegmentChart"
+    );
 
-            borderColor: "#2563eb",
-            backgroundColor: "rgba(37, 99, 235, 0.15)",
+    // Customer Growth Chart
+    if (growthCanvas && !Chart.getChart(growthCanvas)) {
 
-            fill: true,
-            tension: 0.4
-        }]
-    },
+        new Chart(growthCanvas, {
+            type: "line",
 
-    options: {
-        responsive: true
+            data: {
+                labels: [
+                    "Jan", "Feb", "Mar", "Apr", "May", "Jun"
+                ],
+
+                datasets: [{
+                    label: "New Customers",
+                    data: [50, 65, 80, 75, 100, 120],
+
+                    borderColor: "#2563eb",
+                    backgroundColor: "rgba(37, 99, 235, 0.15)",
+
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        display: true
+                    }
+                },
+
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
     }
 
-});
+    // Customer Segmentation Chart
+    if (segmentCanvas && !Chart.getChart(segmentCanvas)) {
 
+        new Chart(segmentCanvas, {
+            type: "doughnut",
 
-// Customer Segmentation Chart
+            data: {
+                labels: [
+                    "New Customers",
+                    "Returning Customers",
+                    "Regular Customers"
+                ],
 
-const customerSegment = document.getElementById(
-    "customerSegmentChart"
-);
+                datasets: [{
+                    data: [30, 45, 25],
 
-new Chart(customerSegment, {
+                    backgroundColor: [
+                        "#3b82f6",
+                        "#16a34a",
+                        "#f59e0b"
+                    ],
 
-    type: "doughnut",
+                    borderWidth: 2
+                }]
+            },
 
-    data: {
-        labels: [
-            "New Customers",
-            "Returning Customers",
-            "Regular Customers"
-        ],
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
 
-        datasets: [{
-            data: [30, 45, 25],
-
-            backgroundColor: [
-                "#3b82f6",
-                "#16a34a",
-                "#f59e0b"
-            ]
-        }]
-    },
-
-    options: {
-        responsive: true
+                plugins: {
+                    legend: {
+                        position: "bottom"
+                    }
+                }
+            }
+        });
     }
+}
 
-});
-
+createCustomerCharts();
