@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizInsight | Business Analytics</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>BizInsight</h2>
+
+        <ul>
+            <li class="active">Dashboard</li>
+            <li>Sales Analytics</li>
+            <li>Customers</li>
+            <li>Products</li>
+            <li>Reports</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <header>
+            <div>
+                <h1>Business Dashboard</h1>
+                <p>Welcome back! Here's your business overview.</p>
+                <div class="filter">
+    <label for="period">Select Period:</label>
+    <select id="period" onchange="updateDashboard()">
+        <option value="6">Last 6 Months</option>
+        <option value="3">Last 3 Months</option>
+        <option value="12">Last 12 Months</option>
+    </select>
+</div>
+            </div>
+            <button onclick="alert('Welcome to BizInsight!')">
+                My Account
+            </button>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <h2>₹8,50,000</h2>
+                <p>+12.5% from last month</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Sales</h3>
+                <h2>1,240</h2>
+                <p>+8.2% from last month</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Customers</h3>
+                <h2>850</h2>
+                <p>+15% from last month</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Order</h3>
+                <h2>₹685</h2>
+                <p>+5.4% from last month</p>
+            </div>
+
+        </section>
+
+        <section class="charts">
+
+            <div class="chart-box">
+                <h2>Monthly Revenue</h2>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h2>Sales by Category</h2>
+                <canvas id="salesChart"></canvas>
+            </div>
+
+        </section>
+
+        <section class="table-box">
+            <h2>Recent Transactions</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Rahul Sharma</td>
+                        <td>Laptop</td>
+                        <td>₹55,000</td>
+                        <td>Completed</td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya Patel</td>
+                        <td>Mobile</td>
+                        <td>₹25,000</td>
+                        <td>Completed</td>
+                    </tr>
+
+                    <tr>
+                        <td>Amit Kumar</td>
+                        <td>Headphones</td>
+                        <td>₹3,000</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>© 2026 BizInsight | Business Analytics Dashboard</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
