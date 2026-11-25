@@ -1,4 +1,8 @@
 
+// =====================================
+// 1. MONTHLY REVENUE CHART
+// =====================================
+
 /* Chart Colors for Deep Teal & Cyan Theme */
 
 Chart.defaults.color = "#B8DDE0";
@@ -10,10 +14,6 @@ Chart.defaults.plugins.legend.labels.color = "#B8DDE0";
 Chart.defaults.plugins.title.color = "#E6F7F8";
 
 Chart.defaults.scale.grid.color = "rgba(148, 190, 195, 0.16)";
-
-// =====================================
-// 1. MONTHLY REVENUE CHART
-// =====================================
 
 const months = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
