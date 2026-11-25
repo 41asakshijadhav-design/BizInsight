@@ -310,3 +310,29 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Regional Sales Analytics */
+
+.regional-section {
+    margin-bottom: 30px;
+}
+
+.regional-section > h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+.regional-section .chart-box {
+    min-height: 320px;
+    height: 320px;
+    position: relative;
+}
+
+.regional-section .chart-box canvas {
+    width: 100% !important;
+    height: 240px !important;
+}
+
+.regional-section .table-box {
+    margin-top: 20px;
+}
