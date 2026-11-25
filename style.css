@@ -407,3 +407,25 @@ footer {
         margin-left: 5px;
     }
 }
+
+/* Sidebar Navigation Links */
+
+.sidebar a {
+    display: block;
+    color: #CBD5E1;
+    text-decoration: none;
+    width: 100%;
+}
+
+.sidebar li:hover a,
+.sidebar li.active a {
+    color: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-content section {
+    scroll-margin-top: 20px;
+}
