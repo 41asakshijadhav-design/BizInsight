@@ -310,3 +310,65 @@ new Chart(productRevenue, {
 
 });
 
+
+// REGIONAL SALES ANALYTICS
+
+const regionalSales = document.getElementById("regionalSalesChart");
+
+if (regionalSales && !Chart.getChart(regionalSales)) {
+    new Chart(regionalSales, {
+        type: "bar",
+        data: {
+            labels: ["Mumbai", "Pune", "Delhi", "Bangalore"],
+            datasets: [{
+                label: "Total Sales",
+                data: [320, 250, 180, 150],
+                backgroundColor: [
+                    "#2563eb",
+                    "#16a34a",
+                    "#f59e0b",
+                    "#a855f7"
+                ],
+                borderRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+const regionalRevenue = document.getElementById("regionalRevenueChart");
+
+if (regionalRevenue && !Chart.getChart(regionalRevenue)) {
+    new Chart(regionalRevenue, {
+        type: "doughnut",
+        data: {
+            labels: ["Mumbai", "Pune", "Delhi", "Bangalore"],
+            datasets: [{
+                data: [250000, 200000, 150000, 100000],
+                backgroundColor: [
+                    "#2563eb",
+                    "#16a34a",
+                    "#f59e0b",
+                    "#a855f7"
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: "bottom"
+                }
+            }
+        }
+    });
+}
