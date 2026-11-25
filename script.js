@@ -466,3 +466,23 @@ if (regionalRevenue && !Chart.getChart(regionalRevenue)) {
         }
     });
 }
+
+/* Active Sidebar Navigation */
+
+const sidebarLinks = document.querySelectorAll(".sidebar a");
+
+sidebarLinks.forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        // Remove active class from all items
+        document.querySelectorAll(".sidebar li").forEach(item => {
+            item.classList.remove("active");
+        });
+
+        // Highlight selected item
+        this.parentElement.classList.add("active");
+
+    });
+
+});
