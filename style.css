@@ -338,3 +338,92 @@ footer {
     margin-top: 20px;
 }
 
+/* Improved Responsive Design */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+        padding: 20px 12px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .sidebar li {
+        padding: 10px;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        padding: 15px;
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-box,
+    .table-box {
+        padding: 15px;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .chart-box canvas {
+        max-width: 100%;
+    }
+
+    .insights-container {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        min-width: 550px;
+    }
+
+    .filter select {
+        margin-left: 5px;
+    }
+}
+
