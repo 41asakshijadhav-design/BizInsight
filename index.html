@@ -1,9 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>BizInsight | Business Analytics</title>
 
     <link rel="stylesheet" href="style.css">
@@ -13,39 +15,62 @@
 
 <body>
 
-  
-<div class="sidebar">
-    <h2>BizInsight</h2>
+    <!-- Sidebar Navigation -->
 
-    <ul>
-        <li class="active"><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#sales">Sales Analytics</a></li>
-        <li><a href="#customers">Customers</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#reports">Reports</a></li>
-    </ul>
-</div>
+    <div class="sidebar">
 
+        <h2>BizInsight</h2>
+
+        <ul>
+            <li class="active"><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#sales">Sales Analytics</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#reports">Reports</a></li>
+        </ul>
+
+    </div>
+
+
+    <!-- Main Content -->
 
     <div class="main-content" id="dashboard">
 
+
+        <!-- Header -->
+
         <header>
+
             <div>
+
                 <h1>Business Dashboard</h1>
+
                 <p>Welcome back! Here's your business overview.</p>
+
                 <div class="filter">
-    <label for="period">Select Period:</label>
-    <select id="period" onchange="updateDashboard()">
-        <option value="6">Last 6 Months</option>
-        <option value="3">Last 3 Months</option>
-        <option value="12">Last 12 Months</option>
-    </select>
-</div>
+
+                    <label for="period">Select Period:</label>
+
+                    <select id="period" onchange="updateDashboard()">
+
+                        <option value="6">Last 6 Months</option>
+                        <option value="3">Last 3 Months</option>
+                        <option value="12">Last 12 Months</option>
+
+                    </select>
+
+                </div>
+
             </div>
+
             <button onclick="downloadReport()">
-    Download Report
-</button>
+                Download Report
+            </button>
+
         </header>
+
+
+        <!-- KPI Cards -->
 
         <section class="cards">
 
@@ -75,158 +100,334 @@
 
         </section>
 
+
+        <!-- Sales Analytics -->
+
         <section class="charts" id="sales">
 
             <div class="chart-box">
+
                 <h2>Monthly Revenue</h2>
+
                 <canvas id="revenueChart"></canvas>
+
             </div>
 
             <div class="chart-box">
+
                 <h2>Sales by Category</h2>
+
                 <canvas id="salesChart"></canvas>
+
             </div>
 
         </section>
 
-<section class="customer-section" id="customers">
 
-    <h2>Customer Analytics</h2>
+        <!-- Customer Analytics -->
 
-    <div class="charts">
+        <section class="customer-section" id="customers">
 
-        <div class="chart-box">
-            <h2>Customer Growth</h2>
-            <canvas id="customerGrowthChart"></canvas>
-        </div>
+            <h2>Customer Analytics</h2>
 
-        <div class="chart-box">
-            <h2>Customer Segmentation</h2>
-            <canvas id="customerSegmentChart"></canvas>
-        </div>
+            <div class="charts">
 
-    </div>
+                <div class="chart-box">
 
-</section>
+                    <h2>Customer Growth</h2>
 
-<!-- Business Insights & Recommendations -->
-<section class="insights-section">
+                    <canvas id="customerGrowthChart"></canvas>
 
-    <h2>Business Insights & Recommendations</h2>
+                </div>
 
-    <div class="insights-container">
+                <div class="chart-box">
 
-        <div class="insight-card">
-            <h3>📈 Sales Growth</h3>
-            <p>Sales increased during the recent months, showing positive business performance.</p>
-            <strong>Recommendation:</strong>
-            <p>Continue successful sales strategies and monitor monthly growth.</p>
-        </div>
+                    <h2>Customer Segmentation</h2>
 
-        <div class="insight-card">
-            <h3>💻 Best-Selling Product</h3>
-            <p>Laptop and Mobile are among the top-performing products.</p>
-            <strong>Recommendation:</strong>
-            <p>Maintain sufficient stock of popular products.</p>
-        </div>
+                    <canvas id="customerSegmentChart"></canvas>
 
-        <div class="insight-card">
-            <h3>👥 Customer Insights</h3>
-            <p>Returning customers contribute to business growth.</p>
-            <strong>Recommendation:</strong>
-            <p>Introduce loyalty rewards to encourage repeat purchases.</p>
-        </div>
+                </div>
 
-        <div class="insight-card">
-            <h3>🎯 Sales Target</h3>
-            <p>Some months performed above the expected sales target.</p>
-            <strong>Recommendation:</strong>
-            <p>Analyze successful months and apply effective strategies consistently.</p>
-        </div>
+            </div>
 
-    </div>
-
-</section>
-
-<!-- Regional Sales Analytics -->
-<section class="regional-section">
-
-    <h2>Regional Sales Analytics</h2>
-
-    <div class="charts">
-
-        <div class="chart-box">
-            <h2>Sales by Region</h2>
-            <canvas id="regionalSalesChart"></canvas>
-        </div>
-
-        <div class="chart-box">
-            <h2>Regional Revenue</h2>
-            <canvas id="regionalRevenueChart"></canvas>
-        </div>
-
-    </div>
-
-    <section class="table-box" id="reports">
-        <h2>Regional Performance</h2>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Region</th>
-                    <th>Total Sales</th>
-                    <th>Revenue</th>
-                    <th>Performance</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Mumbai</td>
-                    <td>320</td>
-                    <td>₹2,50,000</td>
-                    <td>High</td>
-                </tr>
-                <tr>
-                    <td>Pune</td>
-                    <td>250</td>
-                    <td>₹2,00,000</td>
-                    <td>High</td>
-                </tr>
-                <tr>
-                    <td>Delhi</td>
-                    <td>180</td>
-                    <td>₹1,50,000</td>
-                    <td>Medium</td>
-                </tr>
-                <tr>
-                    <td>Bangalore</td>
-                    <td>150</td>
-                    <td>₹1,00,000</td>
-                    <td>Medium</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</section>
+        </section>
 
 
+        <!-- Product Analytics -->
 
-        <section class="table-box">
+        <section class="product-section" id="products">
+
+            <h2>Product Analytics</h2>
+
+            <div class="charts">
+
+                <div class="chart-box">
+
+                    <h2>Top Products</h2>
+
+                    <canvas id="topProductsChart"></canvas>
+
+                </div>
+
+                <div class="chart-box">
+
+                    <h2>Product Revenue</h2>
+
+                    <canvas id="productRevenueChart"></canvas>
+
+                </div>
+
+            </div>
+
+            <div class="table-box">
+
+                <h2>Product Performance</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Product</th>
+                            <th>Units Sold</th>
+                            <th>Revenue</th>
+                            <th>Performance</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Laptop</td>
+                            <td>320</td>
+                            <td>₹3,50,000</td>
+                            <td>High</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mobile</td>
+                            <td>280</td>
+                            <td>₹2,50,000</td>
+                            <td>High</td>
+                        </tr>
+
+                        <tr>
+                            <td>Headphones</td>
+                            <td>150</td>
+                            <td>₹80,000</td>
+                            <td>Medium</td>
+                        </tr>
+
+                        <tr>
+                            <td>Accessories</td>
+                            <td>100</td>
+                            <td>₹50,000</td>
+                            <td>Medium</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Business Insights & Recommendations -->
+
+        <section class="insights-section">
+
+            <h2>Business Insights & Recommendations</h2>
+
+            <div class="insights-container">
+
+                <div class="insight-card">
+
+                    <h3>📈 Sales Growth</h3>
+
+                    <p>
+                        Sales increased during the recent months,
+                        showing positive business performance.
+                    </p>
+
+                    <strong>Recommendation:</strong>
+
+                    <p>
+                        Continue successful sales strategies and
+                        monitor monthly growth.
+                    </p>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>💻 Best-Selling Product</h3>
+
+                    <p>
+                        Laptop and Mobile are among the
+                        top-performing products.
+                    </p>
+
+                    <strong>Recommendation:</strong>
+
+                    <p>
+                        Maintain sufficient stock of popular products.
+                    </p>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>👥 Customer Insights</h3>
+
+                    <p>
+                        Returning customers contribute to
+                        business growth.
+                    </p>
+
+                    <strong>Recommendation:</strong>
+
+                    <p>
+                        Introduce loyalty rewards to encourage
+                        repeat purchases.
+                    </p>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>🎯 Sales Target</h3>
+
+                    <p>
+                        Some months performed above the
+                        expected sales target.
+                    </p>
+
+                    <strong>Recommendation:</strong>
+
+                    <p>
+                        Analyze successful months and apply
+                        effective strategies consistently.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Regional Sales Analytics -->
+
+        <section class="regional-section">
+
+            <h2>Regional Sales Analytics</h2>
+
+            <div class="charts">
+
+                <div class="chart-box">
+
+                    <h2>Sales by Region</h2>
+
+                    <canvas id="regionalSalesChart"></canvas>
+
+                </div>
+
+                <div class="chart-box">
+
+                    <h2>Regional Revenue</h2>
+
+                    <canvas id="regionalRevenueChart"></canvas>
+
+                </div>
+
+            </div>
+
+
+            <!-- Regional Performance Table -->
+
+            <div class="table-box">
+
+                <h2>Regional Performance</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Region</th>
+                            <th>Total Sales</th>
+                            <th>Revenue</th>
+                            <th>Performance</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Mumbai</td>
+                            <td>320</td>
+                            <td>₹2,50,000</td>
+                            <td>High</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pune</td>
+                            <td>250</td>
+                            <td>₹2,00,000</td>
+                            <td>High</td>
+                        </tr>
+
+                        <tr>
+                            <td>Delhi</td>
+                            <td>180</td>
+                            <td>₹1,50,000</td>
+                            <td>Medium</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>150</td>
+                            <td>₹1,00,000</td>
+                            <td>Medium</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Transactions / Reports -->
+
+        <section class="table-box" id="reports">
+
             <h2>Recent Transactions</h2>
 
             <table>
+
                 <thead>
+
                     <tr>
                         <th>Customer</th>
                         <th>Product</th>
                         <th>Amount</th>
                         <th>Status</th>
                     </tr>
+
                 </thead>
 
                 <tbody>
+
                     <tr>
                         <td>Rahul Sharma</td>
                         <td>Laptop</td>
@@ -247,17 +448,29 @@
                         <td>₹3,000</td>
                         <td>Pending</td>
                     </tr>
+
                 </tbody>
+
             </table>
+
         </section>
 
+
+        <!-- Footer -->
+
         <footer>
+
             <p>© 2026 BizInsight | Business Analytics Dashboard</p>
+
         </footer>
 
     </div>
 
+
+    <!-- JavaScript -->
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
