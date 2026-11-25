@@ -264,3 +264,49 @@ footer {
     background: #eff6ff;
 }
 
+
+/* Business Insights */
+
+.insights-section {
+    margin-bottom: 30px;
+}
+
+.insights-section > h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+.insights-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.insight-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2563eb;
+}
+
+.insight-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.insight-card p {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.insight-card strong {
+    color: #172554;
+}
+
+@media (max-width: 768px) {
+    .insights-container {
+        grid-template-columns: 1fr;
+    }
+}
