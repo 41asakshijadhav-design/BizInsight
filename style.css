@@ -231,6 +231,8 @@ footer {
     height: 240px !important;
 }
 
+/* Product Analytics */
+
 .product-section {
     margin-bottom: 30px;
 }
@@ -263,7 +265,6 @@ footer {
 .product-section th {
     background: #eff6ff;
 }
-
 
 /* Business Insights */
 
@@ -336,3 +337,4 @@ footer {
 .regional-section .table-box {
     margin-top: 20px;
 }
+
